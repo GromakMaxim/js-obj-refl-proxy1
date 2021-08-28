@@ -1,5 +1,5 @@
 export default function orderByProps(targetObj, propsArr) {
-  if (Object.entries(targetObj).length === 0) return [{}];
+  if (arguments.length === 0 || Object.entries(targetObj).length === 0) return [{}];
   if (typeof propsArr === 'undefined') propsArr = [];
 
   const foundProps = [];
