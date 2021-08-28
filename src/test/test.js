@@ -100,3 +100,22 @@ test('should return sorted arr (no props array)', () => {
 
   expect(actualOutput).toStrictEqual(expectedOutput);
 });
+
+test('should return sorted arr (given empty obj)', () => {
+  const inputObj = {};
+  const expectedOutput = [{}];
+
+  const actualOutput = orderByProps(inputObj);
+
+  expect(actualOutput).toStrictEqual(expectedOutput);
+});
+
+test('should return sorted arr (given: empty obj, empty props)', () => {
+  const inputObj = {};
+  const inputProps = [];
+  const expectedOutput = [{}];
+
+  const actualOutput = orderByProps(inputObj, inputProps);
+
+  expect(actualOutput).toStrictEqual(expectedOutput);
+});
