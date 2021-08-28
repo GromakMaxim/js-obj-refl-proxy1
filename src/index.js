@@ -1,6 +1,7 @@
 export default function orderByProps(targetObj, propsArr) {
   const foundProps = [];
   const otherProps = [];
+  if (typeof propsArr === 'undefined') propsArr = [];
   for (const item in targetObj) {
     const tempObj = { key: item, value: targetObj[item] };
 

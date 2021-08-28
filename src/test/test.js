@@ -78,6 +78,25 @@ test('should return sorted arr (0prop)', () => {
 
   expect(actualOutput).toStrictEqual(expectedOutput);
 });
+
 /*
 incorrect data
 */
+test('should return sorted arr (no props array)', () => {
+  const inputObj = {
+    name: 'мечник', health: 10, level: 2, attack: 80, defence: 40,
+  };
+  const expectedOutput = [
+    { key: 'attack', value: 80 },
+    { key: 'defence', value: 40 },
+
+    { key: 'health', value: 10 },
+    { key: 'level', value: 2 },
+    { key: 'name', value: 'мечник' },
+
+  ];
+
+  const actualOutput = orderByProps(inputObj);
+
+  expect(actualOutput).toStrictEqual(expectedOutput);
+});
